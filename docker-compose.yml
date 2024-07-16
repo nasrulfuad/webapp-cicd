@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: golang-cicd-web
+    build: .
+    ports:
+      - "2222:2222"
+    networks:
+      - caddy_app_network
+
+networks:
+  caddy_app_network:
+    external: true
